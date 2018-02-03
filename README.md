@@ -6,6 +6,7 @@ Ready snapshot/test images
 Starting from 24.09.2016, ready images, built on **Raspberry Pi 3** with **LEDE** toolchain, are available **[on my server](http://projects.dymacz.pl)**.
 
 Images are built and uploaded on FTP only when master branch in repository was updated - custom script checks this once per day. On the FTP you will find also toolchain which is used to build images.
+创建于2018.2.3
 
 Table of contents
 -----------------
@@ -122,6 +123,7 @@ Currently supported devices:
   - YunCore AP90Q
   - YunCore CPE830
   - Zbtlink ZBT-WE1526
+  -WA112AC
 
 I tested this modification on most of these devices, with OpenWrt and OFW firmware. If you are not sure about the version of your device, please contact with me **before** you try to make an upgrade. Changing bootloader to a wrong version will probably damage your router and you will need special hardware to fix it, so please, **be very careful**.
 
