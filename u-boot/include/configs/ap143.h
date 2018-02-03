@@ -185,11 +185,18 @@
 	#define CONFIG_QCA_GPIO_MASK_IN		GPIO17
 	#define CONFIG_QCA_GPIO_MASK_OUT_INIT_H	CONFIG_QCA_GPIO_MASK_LED_ACT_L
 
+#elif defined(CONFIG_FOR_WA112AC)
+
+	#define CONFIG_QCA_GPIO_MASK_LED_ACT_L	GPIO4  | GPIO13 | GPIO15 |\
+						GPIO16
+	#define CONFIG_QCA_GPIO_MASK_OUT	CONFIG_QCA_GPIO_MASK_LED_ACT_L
+	#define CONFIG_QCA_GPIO_MASK_IN		GPIO17
+	#define CONFIG_QCA_GPIO_MASK_OUT_INIT_H	CONFIG_QCA_GPIO_MASK_LED_ACT_L
+
 #elif defined(CONFIG_FOR_ZBTLINK_ZBT_WE1526)
 
 	#define CONFIG_QCA_GPIO_MASK_LED_ACT_L	GPIO4  | GPIO11 | GPIO12 |\
-						GPIO13 | GPIO14 | GPIO15 |\
-						GPIO16
+						GPIO14 | GPIO15 | GPIO16
 	#define CONFIG_QCA_GPIO_MASK_OUT	CONFIG_QCA_GPIO_MASK_LED_ACT_L
 	#define CONFIG_QCA_GPIO_MASK_IN		GPIO17
 	#define CONFIG_QCA_GPIO_MASK_OUT_INIT_H	CONFIG_QCA_GPIO_MASK_LED_ACT_L
@@ -219,6 +226,7 @@
       defined(CONFIG_FOR_P2W_R602N)      ||\
       defined(CONFIG_FOR_YUNCORE_AP90Q)  ||\
       defined(CONFIG_FOR_YUNCORE_CPE830) ||\
+      defined(CONFIG_FOR_WA112AC)      ||\
       defined(CONFIG_FOR_ZBTLINK_ZBT_WE1526)
 
 	#define CONFIG_BOOTARGS	"console=ttyS0,115200 root=31:02 "\
@@ -292,12 +300,14 @@
       defined(CONFIG_FOR_WALLYS_DR531)   ||\
       defined(CONFIG_FOR_YUNCORE_AP90Q)  ||\
       defined(CONFIG_FOR_YUNCORE_CPE830) ||\
+      defined(CONFIG_FOR_WA112AC)      ||\
       defined(CONFIG_FOR_ZBTLINK_ZBT_WE1526)
 	#define CFG_LOAD_ADDR	0x9F050000
 #endif
 
 #if defined(CONFIG_FOR_P2W_CPE505N)    ||\
     defined(CONFIG_FOR_P2W_R602N)      ||\
+    defined(CONFIG_FOR_WA112AC)      ||\
     defined(CONFIG_FOR_YUNCORE_AP90Q)  ||\
     defined(CONFIG_FOR_YUNCORE_CPE830) ||\
     defined(CONFIG_FOR_ZBTLINK_ZBT_WE1526)
@@ -320,6 +330,7 @@
 	#define CFG_ENV_SECT_SIZE	0x10000
 #elif defined(CONFIG_FOR_P2W_CPE505N)    ||\
       defined(CONFIG_FOR_P2W_R602N)      ||\
+      defined(CONFIG_FOR_WA112AC)      ||\
       defined(CONFIG_FOR_YUNCORE_AP90Q)  ||\
       defined(CONFIG_FOR_YUNCORE_CPE830) ||\
       defined(CONFIG_FOR_ZBTLINK_ZBT_WE1526)
@@ -370,6 +381,7 @@
 	#define OFFSET_MAC_ADDRESS		0x00000
 #elif defined(CONFIG_FOR_P2W_CPE505N)    ||\
       defined(CONFIG_FOR_P2W_R602N)      ||\
+      defined(CONFIG_FOR_WA112AC)      ||\
       defined(CONFIG_FOR_YUNCORE_AP90Q)  ||\
       defined(CONFIG_FOR_YUNCORE_CPE830) ||\
       defined(CONFIG_FOR_ZBTLINK_ZBT_WE1526)
@@ -418,7 +430,8 @@
 #if defined(CONFIG_FOR_COMFAST_CF_E314N)    ||\
     defined(CONFIG_FOR_COMFAST_CF_E320N_V2) ||\
     defined(CONFIG_FOR_COMFAST_CF_E520N)    ||\
-    defined(CONFIG_FOR_COMFAST_CF_E530N)
+    defined(CONFIG_FOR_COMFAST_CF_E530N)    ||\
+    defined(CONFIG_FOR_WA112AC)
 	#undef CONFIG_CMD_DHCP
 	#undef CONFIG_CMD_LOADB
 	#undef CONFIG_CMD_SNTP
@@ -462,6 +475,7 @@
 #elif defined(CONFIG_FOR_P2W_CPE505N)    ||\
       defined(CONFIG_FOR_P2W_R602N)      ||\
       defined(CONFIG_FOR_WALLYS_DR531)   ||\
+      defined(CONFIG_FOR_WA112AC)      ||\
       defined(CONFIG_FOR_YUNCORE_AP90Q)  ||\
       defined(CONFIG_FOR_YUNCORE_CPE830) ||\
       defined(CONFIG_FOR_ZBTLINK_ZBT_WE1526)
@@ -505,6 +519,7 @@
 
 #elif defined(CONFIG_FOR_P2W_CPE505N)    ||\
       defined(CONFIG_FOR_P2W_R602N)      ||\
+      defined(CONFIG_FOR_WA112AC)      ||\
       defined(CONFIG_FOR_YUNCORE_AP90Q)  ||\
       defined(CONFIG_FOR_YUNCORE_CPE830) ||\
       defined(CONFIG_FOR_ZBTLINK_ZBT_WE1526)
@@ -531,6 +546,7 @@
     !defined(CONFIG_FOR_P2W_CPE505N)         &&\
     !defined(CONFIG_FOR_P2W_R602N)           &&\
     !defined(CONFIG_FOR_WALLYS_DR531)        &&\
+    !defined(CONFIG_FOR_WA112AC)           &&\
     !defined(CONFIG_FOR_YUNCORE_AP90Q)       &&\
     !defined(CONFIG_FOR_YUNCORE_CPE830)      &&\
     !defined(CONFIG_FOR_ZBTLINK_ZBT_WE1526)
@@ -539,6 +555,7 @@
 
 #if defined(CONFIG_FOR_P2W_CPE505N)    ||\
     defined(CONFIG_FOR_P2W_R602N)      ||\
+    defined(CONFIG_FOR_WA112AC)      ||\
     defined(CONFIG_FOR_YUNCORE_AP90Q)  ||\
     defined(CONFIG_FOR_YUNCORE_CPE830) ||\
     defined(CONFIG_FOR_ZBTLINK_ZBT_WE1526)
@@ -550,7 +567,6 @@
  * Other configuration
  * ===================
  */
-
 /* Cache lock for stack */
 #define CONFIG_INIT_SRAM_SP_OFFSET	0xbd001800
 
