@@ -743,6 +743,15 @@ zbtlink_zbt-we1526: qca953x_common
 	@$(call define_add,CFG_ATHRS27_PHY,1)
 	@$(call define_add,CFG_ATH_GMAC_NMACS,2)
 	@$(MKCONFIG) -a ap143 mips mips ap143 ar7240 ar7240
+	
+wa112ac: qca953x_common
+	@$(call config_init,OLDCAT WA112AC,wa112ac,16,17,1,QCA_QCA953X_SOC)
+	@$(call define_add,CONFIG_FOR_WA112AC,1)
+	@$(call define_add,CONFIG_PCI,1)
+	@$(call define_add,CFG_ATHRS27_PHY,1)
+	@$(call define_add,CFG_ATH_GMAC_NMACS,2)
+	@$(MKCONFIG) -a ap143 mips mips ap143 ar7240 ar7240	
+	
 
 # =============
 # CLEAN TARGETS
