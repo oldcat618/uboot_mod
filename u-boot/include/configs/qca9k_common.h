@@ -74,12 +74,12 @@
 
 /* Default device and server IPs, net console */
 #define CONFIG_IPADDR		192.168.1.1
-#define CONFIG_SERVERIP		192.168.1.2
+#define CONFIG_SERVERIP		192.168.1.10
 #define CONFIG_NETCONSOLE	1
 #define CONFIG_NETCONSOLE_PORT	6666
 
 /* Other environment variables */
-#define CONFIG_BOOTFILE	firmware.bin
+#define CONFIG_BOOTFILE	firmware_auto.bin
 #define CONFIG_LOADADDR	0x80800000
 #define CONFIG_AUTOLOAD	no
 #define CONFIG_BOOTP_RANDOM_DELAY	1
