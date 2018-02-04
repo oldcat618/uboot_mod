@@ -103,6 +103,7 @@
 				"erase $fw_addr +$filesize && " \
 				"cp.b $loadaddr $fw_addr $filesize && " \
 				"echo DONE! Firmware upgraded!; " \
+				"reset;" \
 			"else " \
 				"echo ERROR! $serverip is not reachable!; " \
 			"fi\0"
@@ -182,6 +183,7 @@
 				"echo \\#\\# Error: button was not pressed long enough!;" \
 				"echo Continuing normal boot...;" \
 				"echo;" \
+				"run fw_upg;" \
 			"fi;" \
 			"setenv cnt;" \
 		"fi\0"
