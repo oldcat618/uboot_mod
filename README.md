@@ -181,6 +181,7 @@ More information about supported devices:
 | YunCore CPE830 | QCA9531 | 16 MiB | 64 MiB DDR2 | 256 KiB | R/W |
 | YunCore CPE870 | AR9341 | 8 MiB | 64 MiB DDR2 | 64 KiB, LZMA | R/W |
 | Zbtlink ZBT-WE1526 | QCA9531 | 16 MiB | 128 MiB DDR2 | 256 KiB | R/W |
+| BHW WA112AC | QCA9531 | 16 MiB | 128 MiB DDR2 | 256 KiB | R/W |
 
 *(LZMA) - U-Boot binary image is compressed with LZMA.*  
 *(R/W) - environment exists in separate FLASH block which allows you to save it and keep after power down.*
