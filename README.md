@@ -123,7 +123,7 @@ Currently supported devices:
   - YunCore AP90Q
   - YunCore CPE830
   - Zbtlink ZBT-WE1526
-  -WA112AC
+  - BHW WA112AC
 
 I tested this modification on most of these devices, with OpenWrt and OFW firmware. If you are not sure about the version of your device, please contact with me **before** you try to make an upgrade. Changing bootloader to a wrong version will probably damage your router and you will need special hardware to fix it, so please, **be very careful**.
 
